@@ -1,20 +1,25 @@
+/*
+CHALLENGE :
+We'll pass you an array of two numbers. Return the sum of those two numbers and all numbers between them.
+The lowest number will not always come first.
+*/
 
 function sumAll(arr) {
-	
+
 	// sort the array from lowest to highest
-	arr.sort(function(a,b) {return a - b});
-	
+	arr.sort(function (a, b) { return a - b });
+
 	// add the first and second values from the original array
-	var result = arr[0] + arr[1];		
-	
+	var result = arr[0] + arr[1];
+
 	// count through all the values between the first and second values
 	for (var i = arr[0] + 1; i < arr[1]; i++) {
 		// add the value to the result
 		result += i;
 	}
-	
+
 	// return the sum of everything
-  return result;
+	return result;
 }
 
 sumAll([1, 4]);
